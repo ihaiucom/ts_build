@@ -3,6 +3,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.emiter = void 0;
 const ts = require("typescript");
 const path = require("path");
+
+const moduleName = require("../build.config").moduleName;
+
 class emiter {
     constructor() {
         /***方法的泛型列表 */
@@ -261,7 +264,7 @@ class emiter {
                     }
                     nodetextAS += (j ? "," : "") + typeText;
                     if (this.importArr[typeText] && !this.url)
-                        typeText = "Laya." + typeText;
+                        typeText = `${moduleName}.` + typeText;
                     nodetext += (j ? "," : "") + typeText + argtext;
                 }
                 if (kind.indexOf("extends") == -1)
@@ -322,7 +325,7 @@ class emiter {
                         argtext += ">";
                     }
                     if (this.importArr[typeText] && !this.url)
-                        typeText = "Laya." + typeText;
+                        typeText = `${moduleName}.` + typeText;
                     nodetext += (j ? "," : "") + typeText + argtext;
                 }
                 tsExtend += " extends " + nodetext + " ";
@@ -711,7 +714,7 @@ class emiter {
                 }
             }
             else if (this.importArr[type] && !this.url) {
-                type = "Laya." + type;
+                type = `${moduleName}.` + type;
             }
         }
         else {
@@ -765,7 +768,7 @@ class emiter {
             }
         }
         if (this.importArr[type] && !this.url)
-            return "Laya." + type;
+            return `${moduleName}.` + type;
         return type;
     }
     emitArray(node) {
