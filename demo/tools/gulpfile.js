@@ -173,7 +173,7 @@ gulp.task('buildJS', async function () {
                 myMultiInput(),
                 typescript({
                     include: /.*(.d.ts|.ts|.js)$/,
-                    tsconfig: "../src/tsconfig.json",
+                    tsconfig: "../tsconfig.json",
                     check: false,
                     tsconfigOverride: { compilerOptions: { removeComments: true } }
                 }),
