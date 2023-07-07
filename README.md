@@ -18,6 +18,16 @@ npm i
 
 
 
+如果报错
+
+[(32条消息) npm错误——npm ERR! code ERESOLVE 解决方法_urnotzkey的博客-CSDN博客](https://blog.csdn.net/qq_38769403/article/details/120702732)
+
+```
+npm i --legacy-peer-deps
+```
+
+
+
 ### build命令
 
 ![](doc/02.png)
