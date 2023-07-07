@@ -1,0 +1,23 @@
+{
+  "from":"../../bin/",
+  "out":"../../build/",
+  "layajsURL":"./as/layajs.exe",
+  "tsConfig":["../../src/tsconfig.json"],
+  "filter":["AniLibPack.d.ts","ILaya.d.ts","GCanvas.d.ts","IPhysics.d.ts","IUI.d.ts","IMap.d.ts"],
+  "createAS":false,
+  "jscObj":{
+    "WebGLRenderingContext":"*",
+    "CanvasRenderingContext2D":"*",
+    "HTMLAudioElement":"Audio",
+    "XMLDocument":"XmlDom",
+    "ChildNode":"XmlDom",
+    "XMLHttpRequest":"*",
+    "TextureFormat":"int",
+    "RenderTextureFormat":"int",
+    "RenderTextureDepthFormat":"int",
+    "HTMLCanvasElement":"*",
+    "ChildNode":"*",
+    "CanvasRenderingContext2D":"*",
+    "GraphicNode":"*"
+  }
+}

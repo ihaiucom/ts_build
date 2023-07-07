@@ -1,0 +1,10 @@
+bin
+node_modules
+.rpt2_cache
+.cache
+/src/generateDoc/doc
+.vscode/chrome
+/src/platform
+.DS_Store
+build
+.history
